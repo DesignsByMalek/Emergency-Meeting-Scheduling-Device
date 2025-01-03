@@ -2,9 +2,9 @@ from datetime import datetime
 from flask import Blueprint, request, jsonify
 from app.modules import SheetService, calender_invite
 
-bp: Blueprint = Blueprint(name='sms', import_name=__name__, url_prefix='/the-red-button')
+bp: Blueprint = Blueprint(name='sms', import_name=__name__, url_prefix='/emergency-button')
 
-# POST /the-red-button/inbound-emergency
+# POST /emergency-button/inbound-emergency
 @bp.route('/inbound-emergency', methods=['POST'])
 def inbound_sms():
     try:
