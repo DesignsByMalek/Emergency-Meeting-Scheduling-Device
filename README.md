@@ -190,6 +190,7 @@ project_root/
 - Enhance error handling for API operations.
 - Add support for additional notification methods and triggers.
 - Integrate further Google APIs for expanded functionality.
+- PCB modifications for better user experience.
 
 
 
