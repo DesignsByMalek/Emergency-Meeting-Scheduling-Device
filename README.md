@@ -244,4 +244,48 @@ void sendSMS() {
 ```
 
 ### Full Code
-The complete Arduino code is available in the GitHub repository.
+The complete code is available in the GitHub repository.
+
+---
+
+## Done By
+
+This project was created and maintained by:
+
+- [GitDevKarim](https://github.com/GitDevKarim)
+- [DesignsByMalek](https://github.com/DesignsByMalek)
+
+Feel free to reach out to us for any questions or contributions!
+
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div style="text-align: center; margin-right: 20px;">
+    <h3>GitDevKarim</h3>
+    <span style="display: inline-block; margin-right: 10px;">
+      <a href="https://github.com/GitDevKarim">
+        <img src="https://skillicons.dev/icons?i=github" width="40" height="40" />
+      </a>
+    </span>
+    <span style="display: inline-block;">
+      <a href="https://linkedin.com/in/karim-jibai001">
+        <img src="https://skillicons.dev/icons?i=linkedin" width="40" height="40" />
+      </a>
+    </span>
+  </div>
+
+  <div style="height: 50px; width: 1px; background-color: #000;"></div>
+
+  <div style="text-align: center; margin-left: 20px;">
+    <h3>DesignsByMalek</h3>
+    <span style="display: inline-block; margin-right: 10px;">
+      <a href="https://github.com/DesignsByMalek">
+        <img src="https://skillicons.dev/icons?i=github" width="40" height="40" />
+      </a>
+    </span>
+    <span style="display: inline-block;">
+      <a href="http://www.linkedin.com/in/malek-itani-3a346b269">
+        <img src="https://skillicons.dev/icons?i=linkedin" width="40" height="40" />
+      </a>
+    </span>
+  </div>
+</div>
