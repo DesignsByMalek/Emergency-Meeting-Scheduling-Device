@@ -1,115 +1,247 @@
+# Integrated Documentation: Remote Emergency Meeting Scheduling Device
 
-# Remote Emergency Meeting Scheduling Device
-
-This project is an open-source IoT solution developed to address the need for efficient and reliable scheduling of emergency meetings. Designed for seamless operation, it automates the process of setting up Google Meet sessions, sending SMS triggers, and dispatching email notifications to clients and team members.
+This comprehensive documentation merges two interconnected projects, combining IoT-enabled emergency scheduling with a Flask application to manage Google services. Together, they offer a robust solution for automating critical communication tasks.
 
 ---
 
-## Overview
+## Project Overview
 
-The system consists of two main components:
-1. **Backend Server**:
-   - Developed by Karim Jibai, this handles SMS received from a GSM module.
-   - Integrates with Google Forms and Sheets to manage client data.
-   - Sends email notifications with meeting details.
+### License
 
-2. **IoT Device**:
-   - A physical device sends an SMS trigger to the backend server when activated.
-   - Built for reliability with a battery life exceeding one year.
-   - Several iterations were made to refine the design for functionality and aesthetics.
-   - All digital files needed for manufacturing, including PCB design, 3D models, and schematics, are included in the repository along with a detailed project document.
+This project is licensed under the Apache License 2.0. You may obtain a copy of the License at:
+
+[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+---
+
+
+### Remote Emergency Meeting Scheduling Device
+An open-source IoT solution designed to automate emergency meeting scheduling. It integrates seamlessly with Google Meet, SMS triggers, and email notifications to enhance reliability and efficiency.
+
+### Flask Application
+A lightweight web application utilizing Google services to automate calendar and spreadsheet management, with SMS processing to trigger calendar invites.
 
 ---
 
 ## Features
 
-### Backend Capabilities:
-- **SMS Trigger**: Integrated with Twilio to receive and process SMS via an international number.
-- **Google Workspace Integration**: Automates Google Meet scheduling and retrieves client data from Google Forms and Sheets.
-- **Email Notifications**: Sends meeting details promptly via email to all participants.
-- **Scalability**: Designed to handle multiple requests in real-time.
+### IoT Device Highlights
+- **SMS Trigger**: Activates the backend server via Twilio to initiate emergency meeting scheduling.
+- **Battery Efficiency**: Operates for over a year on a single battery.
+- **Design Optimization**: Iteratively developed for enhanced functionality and aesthetics.
+- **Complete Resources**: Includes PCB designs, 3D models, schematics, and manufacturing files.
 
-### IoT Device Highlights:
-- **Battery Efficiency**: Designed to operate for over a year without maintenance.
-- **Robust Communication**: Reliable GSM connectivity ensures consistent performance.
-- **Refined Design**: Developed through multiple iterations for optimized functionality and aesthetics.
+### Backend Capabilities
+- **Google Workspace Integration**: Automates Google Meet scheduling and retrieves client data from Google Sheets.
+- **Email Notifications**: Sends meeting details to participants promptly.
+- **Scalability**: Handles multiple requests in real-time.
 
-### Future Additions:
-- Optimization for production environments.
-- Additional notification and customization options.
-
----
-
-## Why Use This Project?
-
-- **Emergency Scheduling**: Automates meeting setups for critical scenarios, ensuring timely communication.
-- **Customizable Backend**: Adapt the system for other use cases or triggers.
-- **Complete Manufacturing Resources**: Includes all necessary files for replicating the device.
-- **Educational Resource**: Learn about Twilio integration, Google Workspace APIs, and backend server design.
+### Flask App Features
+- **Google Calendar Management**: Creates and customizes Google Calendar events, including attendees, timings, and reminders.
+- **Spreadsheet Management**: Reads, writes, and appends data dynamically to Google Sheets.
+- **SMS Processing**: Logs SMS data, retrieves client details, and triggers calendar invites based on the content.
 
 ---
 
 ## Installation
 
 ### Prerequisites
-- Python 3.8+
-- Twilio account with an international number.
-- Google Workspace API access (Forms and Sheets).
-- Server environment (local or cloud-based).
+- **Software**: Python 3.8+
+- **Google APIs**: Enable Calendar and Sheets APIs in the Google Cloud Console.
+- **API Accounts**: Twilio account for SMS handling; OAuth credentials for Google services.
 
-### Setup
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/remote-emergency-meeting-scheduler.git
-   cd remote-emergency-meeting-scheduler
-   ```
-2. Install required packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Configure:
-   - Add your Twilio API keys and Google Workspace credentials in `config.py`.
-   - Verify server settings for your environment.
+### Setup Steps
 
-4. Run the backend server:
-   ```bash
-   python server.py
-   ```
+#### Clone the Repository
+```bash
+git clone <repository_url>
+cd <repository_folder>
+```
+
+#### Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+#### Configure API Credentials
+- Save the credentials JSON file from Google Cloud in the project directory.
+- Add API keys and credentials in `config.py`:
+  ```python
+  CREDENTIAL_FILE = 'path_to_credentials.json'
+  CALENDAR_TOKEN = 'your_calendar_scope'
+  SHEET_TOKEN = 'your_sheet_scope'
+  GOOGLE_SHEET = 'spreadsheet_id'
+  ```
+
+#### Start the Server
+```bash
+python app.py
+```
 
 ---
 
 ## Usage
 
-1. Activate the trigger (SMS received via Twilio).
-2. The backend processes the request and:
-   - Retrieves client details from Google Forms/Sheets.
+### IoT Device
+1. Activate the device to send an SMS trigger to the backend.
+2. The backend:
+   - Retrieves client details from Google Sheets.
    - Schedules a Google Meet session.
-   - Sends email notifications with meeting details.
+   - Sends email notifications to participants.
+
+### Flask App
+
+#### Calendar Management
+- Use the `set_calendar` function to create events:
+  ```python
+  from modules.calendar_v1 import set_calendar
+
+  invitees = ["example1@gmail.com", "example2@gmail.com"]
+  set_calendar(invitees)
+  ```
+
+#### Google Sheets Management
+- Perform operations with the `GoogleSheets` class:
+  ```python
+  from modules.sheets_v1 import GoogleSheets
+
+  gs = GoogleSheets()
+  # Read data
+  data = gs.read_data("Sheet1", "A1:C10")
+  print(data)
+  # Write data
+  values = [["Name", "Age"], ["Alice", 25], ["Bob", 30]]
+  gs.write_data("Sheet1", "A1", values)
+  # Append data
+  new_rows = [["Charlie", 35]]
+  gs.append_data("Sheet1", new_rows)
+  ```
+
+#### SMS Processing
+- Endpoint for SMS:
+  ```bash
+  /emergency-button/inbound-emergency
+  ```
+- Example payload:
+  ```json
+  {
+    "From": "+1234567890",
+    "To": "+0987654321",
+    "Body": "button_id,event_type,battery_health"
+  }
+  ```
+- Functionality:
+  - Logs SMS details to the `SMS Logs` sheet.
+  - Retrieves client emails from the `Client Info` sheet.
+  - Triggers calendar invites based on the SMS content.
 
 ---
 
-## License
+## GoogleAuthenticator Class for Google API Authentication
 
-This project is licensed under the [Apache 2.0 License](LICENSE). 
+### Description
+The `GoogleAuthenticator` class is designed to streamline authentication with Google API services. It handles token management, credential verification, and API service building, making it easier to integrate with Google services like Calendar and Sheets.
 
-### Key Points of the Apache 2.0 License:
-- **Permissive Use**: Allows users to use, modify, and distribute the software in both private and commercial applications.
-- **Attribution Required**: Modifications and redistributed works must provide attribution to the original authors.
-- **Warranty Disclaimer**: Distributed as-is, without warranty or liability.
+### How It Works
 
-By using this license, we encourage innovation and collaboration while ensuring proper credit is given to contributors.
+#### Authentication Process
+- Ensures tokens are valid or refreshes them if expired.
+- Launches a local server to authenticate and save credentials if no token exists.
+- Saves credentials for future use.
+
+#### Service Building
+- Builds a Google API service using authenticated credentials for interaction with APIs like Calendar and Sheets.
+
+#### Example Use
+- Authenticate and initialize Calendar API service:
+  ```python
+  from services.authenticator import GoogleAuthenticator
+
+  auth = GoogleAuthenticator(service_name='calendar', version='v3')
+  credentials = auth.get_authenticated(token_path='path/to/token.json', scope=['https://www.googleapis.com/auth/calendar'])
+  calendar_service = auth.auth_build('calendar', 'v3', credentials)
+  print("Calendar API initialized.")
+  ```
 
 ---
 
-## Contribution
+## Code Structure
 
-Contributions are encouraged! If you:
-- Identify bugs.
-- Have ideas for improvements or extensions.
-- Wish to adapt the system for new use cases.
-
-Please fork the repository and submit a pull request.
+```
+project_root/
+    |- app/
+    |   |- modules/
+    |   |   |- calendar_v1.py   # Manages Google Calendar events
+    |   |   |- sheets_v1.py     # Manages Google Sheets interactions
+    |   |- services/
+    |       |- authenticator.py # Google API authentication utility
+    |   |- routes/
+    |       |- sms.py           # Handles SMS processing and calendar integration
+    |   |- config.py                 # Configuration file for environment variables
+    |- app.py # Entry point
+```
 
 ---
 
-This repository offers a reliable solution for automating critical meeting setups and serves as a foundation for building IoT-integrated backend systems. With the inclusion of all necessary manufacturing files and a comprehensive project document, this project is ready for replication, exploration, and adaptation to your needs. Special thanks to Karim Jibai for developing the backend system that powers this solution.
+## Future Improvements
+
+- Enhance error handling for API operations.
+- Add support for additional notification methods and triggers.
+- Integrate further Google APIs for expanded functionality.
+
+
+
+## IoT Device Code Highlights
+
+### Key Functionalities
+The Arduino code is designed to efficiently manage emergency meeting triggers. Below are the main highlights:
+
+#### 1. **Low Power Mode**
+The device leverages the `LowPower` library to maximize battery life by entering sleep mode when inactive.  
+Example:
+```cpp
+#include "LowPower.h"
+
+void sleepNow() {
+    LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF);  // Sleep for 8 seconds
+}
+```
+
+#### 2. **Button Press Handling**
+An interrupt is used to detect button presses and wake the device from sleep mode.
+```cpp
+const int buttonPin = 2;
+volatile bool buttonPressed = false;
+
+void setup() {
+    attachInterrupt(digitalPinToInterrupt(buttonPin), wakeUp, FALLING);  // Attach interrupt
+}
+
+void wakeUp() {
+    buttonPressed = true;  // Set flag on button press
+}
+```
+
+#### 3. **SIM800L Communication**
+The device uses `SoftwareSerial` to communicate with the SIM800L module for sending SMS triggers.
+```cpp
+#include <SoftwareSerial.h>
+
+SoftwareSerial mySerial(3, 4);  // SIM800L Tx & Rx connected to pins 3 & 4
+
+void sendSMS() {
+    mySerial.begin(9600);
+    mySerial.print("AT+CMGF=1
+");  // Set SMS mode
+    mySerial.print("AT+CMGS="+1234567890"
+");  // Specify recipient
+    mySerial.print("Emergency meeting triggered.
+");  // Message content
+    mySerial.write(26);  // End message with CTRL+Z
+}
+```
+
+### Full Code
+The complete Arduino code is available in the GitHub repository.
