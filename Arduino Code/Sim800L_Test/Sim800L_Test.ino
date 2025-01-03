@@ -1,7 +1,7 @@
 #include <SoftwareSerial.h>
 
 //Create software serial object to communicate with SIM800L
-SoftwareSerial mySerial(3, 2); //SIM800L Tx & Rx is connected to Arduino #3 & #2
+SoftwareSerial mySerial(3, 4); //SIM800L Tx & Rx is connected to Arduino #3 & #4 try switching these if no communication.
 
 void setup()
 {
