@@ -248,7 +248,6 @@ void sendSMS() {
 ---
 
 ## Arduino Flow Chart
-
 ![Arduino Flow chart](Assets/ArduinoFlowChart.drawio.svg)
 
 ---
@@ -257,8 +256,10 @@ void sendSMS() {
 The complete code is available in the GitHub repository.
 
 ---
-##Assembly Animation
+
+## Assembly Animation
 ![Assembly Video](Assets/v27.gif)
+
 ---
 
 ## Done By
