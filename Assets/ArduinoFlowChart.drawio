@@ -1,0 +1,78 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="26.0.3">
+  <diagram name="Page-1" id="yTa6Qnv6Gi01NkGEe9Me">
+    <mxGraphModel dx="1050" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a9iAZEAe1mdnaF9tGAvk-1" target="a9iAZEAe1mdnaF9tGAvk-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-1" value="START" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="70" y="80" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a9iAZEAe1mdnaF9tGAvk-2" target="a9iAZEAe1mdnaF9tGAvk-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-2" value="&#xa;Setup Pins and Modules&#xa;&#xa;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="70" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="a9iAZEAe1mdnaF9tGAvk-4" target="a9iAZEAe1mdnaF9tGAvk-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-4" value="Sleep Mode (Wait for Button)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="70" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="a9iAZEAe1mdnaF9tGAvk-5" target="a9iAZEAe1mdnaF9tGAvk-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-5" value="&#xa;Wake Up on Button Press&#xa;&#xa;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="220" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a9iAZEAe1mdnaF9tGAvk-6" target="a9iAZEAe1mdnaF9tGAvk-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-6" value="Power on SIM Module" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="370" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a9iAZEAe1mdnaF9tGAvk-7" target="a9iAZEAe1mdnaF9tGAvk-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-7" value="Wait for Network" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="365" y="390" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.483;entryY=0.633;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="a9iAZEAe1mdnaF9tGAvk-8" target="a9iAZEAe1mdnaF9tGAvk-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="a9iAZEAe1mdnaF9tGAvk-8" target="a9iAZEAe1mdnaF9tGAvk-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-8" value="&#xa;SMS Sent&#xa;&#xa;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="370" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-9" value="END" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="560" y="490" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-10" value="" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="420" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.967;entryY=0.7;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="a9iAZEAe1mdnaF9tGAvk-7" target="a9iAZEAe1mdnaF9tGAvk-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-21" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="a9iAZEAe1mdnaF9tGAvk-10" target="a9iAZEAe1mdnaF9tGAvk-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="430" as="sourcePoint" />
+            <mxPoint x="340" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-22" value="Not Connected after one minute" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="390" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a9iAZEAe1mdnaF9tGAvk-23" value="Connected" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="360" y="470" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
