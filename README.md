@@ -249,9 +249,7 @@ void sendSMS() {
 ### Full Code
 The complete code is available in the GitHub repository.
 ---
-
-![Assembly Design](Assets/Assembly.jpg)
-![Assembly Video](Assets/Assembly.gif)
+![Assembly Video](Assets/Emergency Meeting Scheduling Device v27.gif)
 ---
 
 ## Done By
