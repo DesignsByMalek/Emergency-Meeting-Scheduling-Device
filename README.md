@@ -183,7 +183,7 @@ project_root/
     |- app.py # Entry point
 ```
 
-
+![Backend Flow chart](Assets/ButtonFlowChart.drawio.svg)
 
 ---
 
@@ -248,7 +248,10 @@ void sendSMS() {
 
 ### Full Code
 The complete code is available in the GitHub repository.
+---
 
+![Assembly Design](Assets/Assembly.jpg)
+![Assembly Video](Assets/Assembly.gif)
 ---
 
 ## Done By
