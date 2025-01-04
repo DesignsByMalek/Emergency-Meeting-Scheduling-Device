@@ -167,7 +167,7 @@ The `GoogleAuthenticator` class is designed to streamline authentication with Go
 
 ---
 
-## Code Structure
+## Python Code Structure
 
 ```
 project_root/
@@ -182,7 +182,7 @@ project_root/
     |   |- config.py                 # Configuration file for environment variables
     |- app.py # Entry point
 ```
-
+## Python Flow Chart 
 ![Backend Flow chart](Assets/ButtonFlowChart.drawio.svg)
 
 ---
@@ -245,10 +245,19 @@ void sendSMS() {
     mySerial.write(26);  // End message with CTRL+Z
 }
 ```
+---
+
+## Arduino Flow Chart
+
+![Arduino Flow chart](Assets/ArduinoFlowChart.drawio.svg)
+
+---
 
 ### Full Code
 The complete code is available in the GitHub repository.
+
 ---
+##Assembly Animation
 ![Assembly Video](Assets/v27.gif)
 ---
 
