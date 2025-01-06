@@ -70,8 +70,8 @@ pip install -r requirements.txt
 - Add API keys and credentials in `config.py`:
   ```python
   CREDENTIAL_FILE = 'path_to_credentials.json'
-  CALENDAR_TOKEN = 'path_to_google_calendar_token'
-  SHEET_TOKEN = 'path_to_google_sheet_token'
+  CALENDAR_TOKEN = 'path_to_google_calendar_token.json'
+  SHEET_TOKEN = 'path_to_google_sheet_token.json'
   GOOGLE_SHEET = 'spreadsheet_id'
   ```
 
